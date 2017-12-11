@@ -1,4 +1,5 @@
 ﻿using System;
+using CLRExer.Generic;
 
 namespace CLRExer
 {
@@ -7,6 +8,10 @@ namespace CLRExer
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            #region generic exer
+            new DictionaryGeneric().CreateDictionaryGeneric();
+            #endregion
+
             Console.ReadLine();
         }
     }
