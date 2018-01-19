@@ -1,4 +1,5 @@
 ﻿using System;
+using CLRExer.Delegates;
 using CLRExer.Generic;
 
 namespace CLRExer
@@ -9,7 +10,13 @@ namespace CLRExer
         {
             Console.WriteLine("Hello World!");
             #region generic exer
-            new DictionaryGeneric().CreateDictionaryGeneric();
+            //new DictionaryGeneric().CreateDictionaryGeneric();
+            #endregion
+
+            #region delegate
+
+            DelegateDemo.Excute();
+
             #endregion
 
             Console.ReadLine();
