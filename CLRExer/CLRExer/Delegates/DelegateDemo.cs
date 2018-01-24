@@ -48,7 +48,7 @@ namespace CLRExer.Delegates
         }
 
         /// <summary>
-        /// 委托链
+        /// 委托链：使用Combine和Remove
         /// </summary>
         private static void ChainDelegateDemo1()
         {
@@ -79,7 +79,7 @@ namespace CLRExer.Delegates
         }
 
         /// <summary>
-        /// 委托链
+        /// 委托链：使用+=和-=
         /// </summary>
         private static void ChainDelegateDemo2()
         {
