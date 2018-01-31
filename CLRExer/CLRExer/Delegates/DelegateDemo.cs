@@ -11,6 +11,9 @@ namespace CLRExer.Delegates
 {
    public sealed class DelegateDemo
     {
+
+
+
         //执行方法
         public static void Excute()
         {
@@ -138,5 +141,5 @@ namespace CLRExer.Delegates
         }
     }
 
-     
+
 }
