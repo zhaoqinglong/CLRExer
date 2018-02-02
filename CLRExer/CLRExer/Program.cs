@@ -15,9 +15,20 @@ namespace CLRExer
 
             #region delegate
 
-            DelegateDemo.Excute();
+            //DelegateDemo.Excute();
 
             #endregion
+
+            #region AttributeDemo
+
+            new AttributeDemo.AttributeDemo().AttributeExcute();
+
+            #endregion
+
+            int? a = 0;
+            var s = a.GetType();
+            
+            Console.WriteLine(s.ToString());
 
             Console.ReadLine();
         }
