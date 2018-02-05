@@ -1,7 +1,7 @@
 ﻿using System;
 using CLRExer.Delegates;
 using CLRExer.Generic;
-
+using TokenBusiness.Jwt;
 namespace CLRExer
 {
     class Program
@@ -25,10 +25,14 @@ namespace CLRExer
 
             #endregion
 
-            int? a = 0;
-            var s = a.GetType();
-            
-            Console.WriteLine(s.ToString());
+            #region JwtToken
+
+            var token = new Token();
+            var jwt = token.GetTokenJwt();
+            token.DecryptJwt();
+            Console.WriteLine(jwt);
+
+            #endregion
 
             Console.ReadLine();
         }
