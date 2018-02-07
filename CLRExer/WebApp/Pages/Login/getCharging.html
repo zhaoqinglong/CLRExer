@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../../Scripts/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            var ticket = "59995B2A4D764A4B4438BC959AED158BF0EFC561D63751C28F1DF69E9F190F67EEF9C7133A6CCEF863362EEBC4CAFFBF8043A51DFAF247DDCE958A4F4108880D46A9D8FCDDBF8BCCC3A65C7C5E1CE144835AED382AFDFEA91725822AFB9CE1479A8446E074815A9BB04AF59D7C0E1E66";
+            $.ajax({
+                type: "get",
+                url: "/api/Charging/GetAllChargingData",
+                data: {},
+                beforeSend: function (XHR) {
+                    //发送ajax请求之前向http的head里面加入验证信息
+                    XHR.setRequestHeader('Authorization', 'BasicAuth ' + ticket);
+                },
+                success: function (data, status) {
+                    console.log(data);
+
+                    if (status == "success") {
+                        $("#div_test").html(data);
+                    }
+                },
+                error: function (e) {
+                    $("#div_test").html("Error");
+                },
+                complete: function () {
+
+                }
+
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <p>get charging</p>
+    <div id="div_test"></div>
+</body>
+</html>
