@@ -9,7 +9,8 @@ namespace WebApp
         {
             filters.Add(new HandleErrorAttribute());
 
-          
+            //注入用户Basic Auth验证
+            //filters.Add(new BasicAuthProvider());
         }
     }
 }

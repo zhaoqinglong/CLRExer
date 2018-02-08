@@ -18,8 +18,10 @@ namespace WebApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            //注入基本验证
 
+            
+
+           
             //filters.Add(new BasicAuthProvider());
         }
     }

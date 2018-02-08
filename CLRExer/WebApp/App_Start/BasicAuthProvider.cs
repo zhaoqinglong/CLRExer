@@ -1,5 +1,8 @@
 ﻿using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Filters;
 using System.Web.Security;
 
 namespace WebApp
@@ -8,7 +11,7 @@ namespace WebApp
     /// 基本身份认证
     /// </summary>
     public class BasicAuthProvider : AuthorizeAttribute
-    {
+    {    
         //重写基类的验证方式，加入我们自定义的Ticket验证  
         public override void OnAuthorization(System.Web.Http.Controllers.HttpActionContext actionContext)
         {
@@ -43,12 +46,12 @@ namespace WebApp
         private bool ValidateTicket(string encryptTicket)
         {
             //解密Ticket
-            var strTicket = FormsAuthentication.Decrypt(encryptTicket).UserData;
-
+            var strTicket = FormsAuthentication.Decrypt(encryptTicket);
+            var ticket = strTicket.UserData;
             //从Ticket里面获取用户名和密码
-            var index = strTicket.IndexOf("&");
-            string strUser = strTicket.Substring(0, index);
-            string strPwd = strTicket.Substring(index + 1);
+            var index = ticket.IndexOf("&");
+            string strUser = ticket.Substring(0, index);
+            string strPwd = ticket.Substring(index + 1);
 
             if (strUser == "admin" && strPwd == "123456")
             {

@@ -10,7 +10,7 @@ namespace WebApp.Controllers
     /// <summary>
     /// 授权
     /// </summary>
-    //[RequestAuthorize]
+    [BasicAuthProvider]
     public class ChargingController : ApiController
     {
         /// <summary>
@@ -31,7 +31,7 @@ namespace WebApp.Controllers
         [HttpGet]
         public string GetAllChargingData(string id)
         {
-            return "ChargingData" + id;
+            return "ChargingData：" + id;
         }
     }
 }
