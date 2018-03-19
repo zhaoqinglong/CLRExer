@@ -1,6 +1,7 @@
 ﻿using System;
 using CLRExer.Delegates;
 using CLRExer.Generic;
+using CLRExer.MultiThread;
 using TokenBusiness.Jwt;
 namespace CLRExer
 {
@@ -27,11 +28,20 @@ namespace CLRExer
 
             #region JwtToken
 
-            var token = new Token();
-            var jwt = token.GetTokenJwt();
-            token.DecryptJwt();
-            Console.WriteLine(jwt);
+            //var token = new Token();
+            //var jwt = token.GetTokenJwt();
+            //token.DecryptJwt();
+            //Console.WriteLine(jwt);
 
+            #endregion
+
+            #region 多线程
+            //执行线程池中的多线程
+            //ThreadPoolDemo.Excute();
+
+            CancellationDemo.CancellationGo();
+
+            //new  TaskDemo().Excute();
             #endregion
 
             Console.ReadLine();
