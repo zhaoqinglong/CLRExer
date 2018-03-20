@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using CLRExer.Delegates;
 using CLRExer.Generic;
 using CLRExer.MultiThread;
@@ -39,9 +40,9 @@ namespace CLRExer
             //执行线程池中的多线程
             //ThreadPoolDemo.Excute();
 
-            CancellationDemo.CancellationGo();
-
-            //new  TaskDemo().Excute();
+            //CancellationDemo.CancellationGo();
+            //TaskScheduler
+            new  TaskDemo().Excute();
             #endregion
 
             Console.ReadLine();
