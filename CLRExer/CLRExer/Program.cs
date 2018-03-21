@@ -10,7 +10,7 @@ namespace CLRExer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
             #region generic exer
             //new DictionaryGeneric().CreateDictionaryGeneric();
             #endregion
@@ -18,12 +18,12 @@ namespace CLRExer
             #region delegate
 
             //DelegateDemo.Excute();
-
+            new SimpleDelegateDemo().Excute();
             #endregion
 
             #region AttributeDemo
 
-            new AttributeDemo.AttributeDemo().AttributeExcute();
+            //new AttributeDemo.AttributeDemo().AttributeExcute();
 
             #endregion
 
@@ -42,7 +42,7 @@ namespace CLRExer
 
             //CancellationDemo.CancellationGo();
             //TaskScheduler
-            new  TaskDemo().Excute();
+            //new  TaskDemo().Excute();
             #endregion
 
             Console.ReadLine();
