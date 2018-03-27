@@ -36,7 +36,8 @@ namespace CLRExer.MultiThread
             Thread.Sleep(1000);
             cst.Cancel();
             Console.WriteLine("task2 result is {0}", t2.Result);
-          
+
+           
         }
 
         /// <summary>

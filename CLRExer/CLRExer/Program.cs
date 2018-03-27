@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using CLRExer.Delegates;
 using CLRExer.Generic;
 using CLRExer.MultiThread;
+using CLRExer.MultiThread.InterlockedDemo;
 using TokenBusiness.Jwt;
 namespace CLRExer
 {
@@ -43,6 +44,14 @@ namespace CLRExer
             //CancellationDemo.CancellationGo();
             //TaskScheduler
             //new  TaskDemo().Excute();
+           //AsyncDemo.Excute();
+
+
+            //new InterLockedCal().Excute();
+
+            //new MultiWebRequests();
+
+            new DownLoadUrlAsync().Excute();
             #endregion
 
             Console.ReadLine();
