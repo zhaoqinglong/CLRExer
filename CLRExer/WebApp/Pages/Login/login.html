@@ -15,8 +15,8 @@
                         if (status == "success") {
 
                             console.log(data);
-
-                            if (!data.bRes){
+                            console.log(!data.BRes);
+                            if (!data.BRes){
                                 alert("登录失败");
                                 return;
                             }
@@ -39,7 +39,7 @@
 <body>
 <div style="text-align:center;"> 
     <div>用户名：<input type="text" id="txt_username" /></div>
-    <div>密  码：<input type="password" id="txt_password"  /></div>
+    <div>密  码：<input type="text" id="txt_password"  /></div>
     <div><input type="button" value="登录" id="btn_login" class="btn-default" /></div>
 </div>
 </body>

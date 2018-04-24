@@ -4,6 +4,7 @@ using CLRExer.Delegates;
 using CLRExer.Generic;
 using CLRExer.MultiThread;
 using CLRExer.MultiThread.InterlockedDemo;
+using CLRExer.Serialization;
 using TokenBusiness.Jwt;
 namespace CLRExer
 {
@@ -51,7 +52,15 @@ namespace CLRExer
 
             //new MultiWebRequests();
 
-            new DownLoadUrlAsync().Excute();
+            //new DownLoadUrlAsync().Excute();
+            #endregion
+
+
+            #region serialization
+
+            new SerDemo().SerExcute();
+
+
             #endregion
 
             Console.ReadLine();
