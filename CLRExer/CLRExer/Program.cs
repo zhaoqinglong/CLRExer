@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using CLRExer.Delegates;
+using CLRExer.Events;
 using CLRExer.Generic;
 using CLRExer.MultiThread;
 using CLRExer.MultiThread.InterlockedDemo;
@@ -45,7 +46,7 @@ namespace CLRExer
             //CancellationDemo.CancellationGo();
             //TaskScheduler
             //new  TaskDemo().Excute();
-           //AsyncDemo.Excute();
+            //AsyncDemo.Excute();
 
 
             //new InterLockedCal().Excute();
@@ -58,10 +59,23 @@ namespace CLRExer
 
             #region serialization
 
-            new SerDemo().SerExcute();
-
+            //new SerDemo().SerExcute();
 
             #endregion
+
+            #region Event
+          
+
+            var mail=new MailManager();
+           
+            //订阅事件
+            var fax=new Fax(mail);
+
+            //引发事件
+            mail.SimulateNewMail("a", "b", "c");
+
+            #endregion
+
 
             Console.ReadLine();
         }
