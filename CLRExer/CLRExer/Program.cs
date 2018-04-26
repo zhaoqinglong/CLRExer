@@ -70,7 +70,8 @@ namespace CLRExer
            
             //订阅事件
             var fax=new Fax(mail);
-
+            fax.Unregister(mail);
+            var mobile=new Mobile(mail);
             //引发事件
             mail.SimulateNewMail("a", "b", "c");
 
